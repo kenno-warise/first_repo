@@ -110,3 +110,9 @@ DjangoでECサイトの開発
 
 　・MEDIA_URL = '/media/'
 　　MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+　・写真のパスを通すためにconfig.urls.pyを編集
+
+　・shoさんのgithubにあるmamazonをクローンし、写真を自分のmediaディレクトリ内に
+　　コピペする
+
