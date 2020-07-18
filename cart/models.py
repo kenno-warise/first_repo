@@ -5,6 +5,7 @@ from mamazon.models import Product
 
 User = settings.AUTH_USER_MODEL # 推奨されている方法
 
+
 class Cart(models.Model):
     """
     ショッピングカート
@@ -18,4 +19,4 @@ class Cart(models.Model):
     products = models.ManyToManyField(Product, blank=True)
     total = models.DecimalField(default=0.00, max_digits=9, decimal_places=2) # 小数点を使えるフィールド
     created = models.DateTimeField(auto_now_add=True) # 作成された時間
-    updated = models.DateTiemField(auto_now=True) # 更新されたら変更
+    updated = models.DateTimeField(auto_now=True) # 更新されたら変更

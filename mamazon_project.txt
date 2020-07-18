@@ -150,4 +150,38 @@ DjangoでECサイトの開発
 　・git checkout cart
 　（branchを決めたら、チェックアウトしcartに移動する
 
+２２．新しいcartのアプリを作成する
+
+　・python3 manage.py startapp cart
+
+　・mamazonのtemplatesもcartで使えそうなので、移動しsettings.pyも編集する。
+
+
+２３．cartアプリを進める
+
+　・開発を終える時は、追加・コミットしてpushする
+
+　・git push origin cart
+
+　・git push --set-upstream origin cart
+
+　・↑を省略して行える。上のコマンドはgitに本籍（URL）を登録し、上流ブランチとなる。
+
+　・git push -u origin cart
+　（上級ブランチになると↓のようにpushだけで行える
+
+　・git push
+
+２４．gitを使い他の開発者が変更を加えたブランチを確認
+
+　・git branch -r
+
+　・↓、自分が今いるブランチを確認
+
+　・git branch -a
+
+
+
+
+
 
