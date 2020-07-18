@@ -61,3 +61,15 @@ DjangoでECサイトの開発
 
 　・STATICFILES = [os.path.join(BASE_DIR, 'static')]
 
+１０．htmlファイル、views.py、confi.urls.py、mamazon.urls.pyを編集し
+　　　ページを出力
+
+１１．gitにコミットする。ついでにgitのコマンド集
+
+　・git clone https://github.com/.../ .
+　このコマンドは、URLにあるファイル群をカレントディレクトリにダウンロードする。
+　自分のgithubアカウントからじゃないとダウンロードできないらしい
+
+　・git push https://github.com/.../
+
+　・git remote add origin https://github.com/.../
