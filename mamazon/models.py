@@ -13,3 +13,6 @@ class Product(models.Model):
     price = models.IntegerField()
     description = models.TextField()
     thumbnail = models.ImageField(upload_to='thumbnails/') # 写真の保存先を指定
+
+    def __str__(self):
+        return self.name

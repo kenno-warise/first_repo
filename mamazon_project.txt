@@ -51,7 +51,7 @@ DjangoでECサイトの開発
 
 　・'mamazon.apps.MamazonConfig',
 
-８．アプリディレクトリ内にテンプレートとスタティックディレクトリ
+８．appディレクトリ内にテンプレートとproject内にstaticディレクトリ
 　　を作成しておく
 
 　・templates
@@ -60,6 +60,8 @@ DjangoでECサイトの開発
 ９．settings.pyにスタティックディレクトリを読み込む設定
 
 　・STATICFILES = [os.path.join(BASE_DIR, 'static')]
+　（なぜこれをするのかというと、デフォルトではappディレクトリ内のstaticを見に行く
+　　ように設定されているため、project全体で管理できるように設定している。
 
 １０．htmlファイル、views.py、confi.urls.py、mamazon.urls.pyを編集し
 　　　ページを出力
@@ -73,3 +75,38 @@ DjangoでECサイトの開発
 　・git push https://github.com/.../
 
 　・git remote add origin https://github.com/.../
+
+１２．データベースの作成
+
+　・models.pyを編集
+
+１３．fixtureを使ってデータを指定したファイルから保存。これはtemplatesやstaticの
+　　　ようにDjangoが認識してくれる。
+
+　・mamazonアプリ内にfixtureディレクトリを作成
+
+　・fixture内にproduct_data.jsonを作成
+
+　・https://github.com/Sh0TaR0/mamazon_fixtures/blob/product_data.jsonから
+　　コードをコピペする
+
+　・python3 manage.py loaddata product_data.json
+　（これでデータが保存される
+
+１４．adminでデータを確認
+
+　・admin.pyを編集
+
+　・スーパーユーザーコマンドを打つ
+　（ネーム：warise パス：kennowarise
+
+　・データが挿入されていることを確認
+
+１５．保存されている写真のリンクを設定
+
+　・projectディレクトリ内にmediaフォルダーを作成
+
+　・staticディレクトリと同じようにsettings.pyで編集する
+
+　・MEDIA_URL = '/media/'
+　　MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

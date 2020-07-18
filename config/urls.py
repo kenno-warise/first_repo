@@ -16,7 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# mediaファイルの設定
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('', include('mamazon.urls')),
     path('admin/', admin.site.urls),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # mediaファイルの設定
